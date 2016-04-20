@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="@dimen/tendp">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/hundred"
+        android:layout_height="@dimen/hundred"
+        android:src="@drawable/profile5" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/tendp"
+        android:paddingTop="@dimen/tendp">
+
+        <TextView
+            android:id="@+id/houseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name of the house"
+            android:textSize="@dimen/twentydp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/houseName"
+            android:text="Amount" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/price"
+            android:text="Location" />
+    </RelativeLayout>
+</LinearLayout>

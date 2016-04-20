@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="rent.thesis.com.rentapp.fragments.FavoritesFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
+        <EditText
+            android:id="@+id/searchLocation"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/edittext_search"
+            android:drawableLeft="@drawable/ic_search_blue"
+            android:drawablePadding="@dimen/tendp"
+            android:drawableTint="@color/colorPrimary"
+            android:hint="Where do you want to live?"
+            android:paddingLeft="@dimen/tendp"
+            android:textAlignment="center"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </android.support.v7.widget.Toolbar>
+
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="rent.thesis.com.rentapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".utils.RentAppApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.StartActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="rent.thesis.com.rentapp.MainActivity" />
+        </activity>
+
+        <!-- Twitter Configuration -->
+        <activity android:name="com.firebase.ui.auth.twitter.TwitterPromptActivity" />
+
+        <meta-data
+            android:name="com.firebase.ui.TwitterKey"
+            android:value="@string/twitter_app_key" />
+        <meta-data
+            android:name="com.firebase.ui.TwitterSecret"
+            android:value="@string/twitter_app_secret" />
+
+        <!-- Facebook Configuration -->
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".ui.RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:parentActivityName=".ui.StartActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="rent.thesis.com.rentapp.ui.StartActivity" />
+        </activity>
+        <activity
+            android:name=".ui.ProfileActivity"
+            android:label="@string/drawer_item_profile"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="rent.thesis.com.rentapp.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ui.RegisterHouseActivity"
+            android:label="Register House"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="rent.thesis.com.rentapp.MainActivity" />
+        </activity>
+        <activity android:name=".ui.NotificationsActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/notifications">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="rent.thesis.com.rentapp.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
